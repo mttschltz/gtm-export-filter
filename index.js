@@ -62,7 +62,7 @@ if (typeof config === 'string') {
 }
 
 // Get folder IDs for folder names
-let folders = foldersByName(config.folders[0], container);
+let folders = foldersByName(config.folders, container);
 const rootFolderIds = folders.map(f => f.folderId);
 
 // Get tags from folder names (or IDs):
