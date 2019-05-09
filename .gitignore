@@ -1,3 +1,4 @@
 node_modules
 containers/*
 !containers/README.md
+config.json
