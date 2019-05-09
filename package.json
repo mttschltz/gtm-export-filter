@@ -1,7 +1,7 @@
 {
   "name": "gtm-export-filter",
   "version": "0.1.0",
-  "description": "Filters exported containers from Google Tag Manager (GTM)",
+  "description": "Filter a subset of tags from exported Google Tag Manager (GTM) containers",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
