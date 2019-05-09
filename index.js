@@ -62,7 +62,7 @@ if (typeof config === 'string') {
 }
 
 // Get folder IDs for folder names
-let folders = foldersByName('GA ', container);
+let folders = foldersByName(config.folders[0], container);
 const rootFolderIds = folders.map(f => f.folderId);
 
 // Get tags from folder names (or IDs):
@@ -90,7 +90,9 @@ triggers.forEach(trigger => {
 // Add variable's folders
 folders = folders.concat(foldersForVariables(variables, container));
 
-// Remove duplicate folders and variables
+// Remove duplicate triggers, variables and folders
+// The duplicate objects should be identical as they're all retrieved from `container`
+triggers = [...new Set(triggers)];
 folders = [...new Set(folders)];
 variables = [...new Set(variables)];
 
